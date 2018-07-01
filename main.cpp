@@ -74,7 +74,7 @@ void evaluation(vector<BoundBox> &test, vector<BoundBox> &real, ofstream &ofs) {
 double overlap(BoundBox &b1, BoundBox &b2) {
     // 返回：两矩形的交集面积/两矩形的并集面积
     // 两矩形的并集面积 = 两矩形面积之和 - 两矩形的交集面积
-    double interaction_area = b1.interact(b2).area();
-    double union_area = b1.area() + b2.area() - interaction_area;
-    return interaction_area / union_area;
+    double intersection_area = b1.intersect(b2).area();
+    double union_area = b1.area() + b2.area() - intersection_area;
+    return intersection_area / union_area;
 }

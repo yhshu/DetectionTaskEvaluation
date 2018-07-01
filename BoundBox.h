@@ -30,7 +30,7 @@ public:
         return (rightDown.x - leftUp.x) * (rightDown.y - leftUp.y);
     }
 
-    Rectangle interact(Rectangle &r) {
+    Rectangle intersect(Rectangle &r) {
         double startX = max(leftUp.x, r.leftUp.x);
         double startY = max(leftUp.y, r.leftUp.y);
         double endX = min(rightDown.x, r.rightDown.x);
