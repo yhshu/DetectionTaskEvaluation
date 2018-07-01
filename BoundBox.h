@@ -1,5 +1,5 @@
 //
-// Created by 舒意恒 on 2018/7/1.
+// Created by Yiheng Shu on 2018/7/1.
 //
 
 #ifndef DETECTIONTASKEVALUATION_BOUNDBOX_H
@@ -42,7 +42,10 @@ public:
 class BoundBox : public Rectangle {
 public:
     string type; // 目标类型
-    BoundBox(double sx, double sy, double ex, double ey, string type) : Rectangle(sx, sy, ex, ey), type(type) {
+    bool visited;
+
+    BoundBox(double sx, double sy, double ex, double ey, string type)
+            : Rectangle(sx, sy, ex, ey), type(type), visited(false) {
     }
 };
 
